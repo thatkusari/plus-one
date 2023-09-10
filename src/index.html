@@ -2,11 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
+    <title>Plus +1!</title>
     <link rel="stylesheet" href="index.css" />
+    <script src="./logic.js"></script>
   </head>
   <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
+    <button id="clicker" onclick="clicked()">
+      <span id="count">0</span>
+      <span></span><span></span><span></span><span></span>
+    </button>
+    <script>
+      var button = document.getElementById("clicker");
+      var countSpan = document.getElementById("count");
+      var count = 0;
+
+      button.addEventListener("click", function() {
+        count++;
+        countSpan.textContent = count;
+      });
+    </script>
   </body>
 </html>
